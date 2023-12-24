@@ -1,32 +1,34 @@
  // Map() function alternative [Squaring array elements]
 
-const arr= [1,2,3,4,5];
-const squareArr=[];
-for(let i=0;i<arr.length;i++){
-    squareArr.push(arr[i]**2);
+const array= [1,2,3,4,5];
+const squareArray=[];
+for(let val=0;val<array.length;val++){
+    squareArray.push(array[val]**2);
 }
-console.log(squareArr)
+console.log(squareArray)
 
 // Filter() function alternative [Filtering odd numbers out]
 
-const mixedArr=[86,54,7,5,32,54,76,87,23]
-let newArr=mixedArr.filter((x)=>{
-    if(x%2 ==0) return x;
-})
-console.log(newArr);
+const mixedArray=[86,54,7,5,32,54,76,87,23]
+let newArray=[];
+for(let val=0;val<mixedArray.length;val++){
+    if(mixedArray[val]%2==0) newArray.push(mixedArray[val]);
+}
+console.log(newArray);
 
 // reduce() function alternative [Reducing array to a single string(value)]
 
-const stringArr=['r','a','i','n','b','o','w'];
-const reducedArr = stringArr.reduce((accumulator,x)=>{
-    return accumulator+x;
-},"")
-console.log(reducedArr);
+const stringArray=['r','a','i','n','b','o','w'];
+let reducedArray = '';
+for(let val=0;val<stringArray.length;val++){
+    reducedArray+=stringArray[val];
+}
+console.log(reducedArray);
 
 //forEach() alternative [Printing elements using for loop]
 
-const arrEle=[86,54,7,5,32,54,76,87,23]
-for(let i=0;i<arr.length;i++){
-    console.log(`Element ${arrEle[i]} at index ${i}`);
+const arrayElement=[86,54,7,5,32,54,76,87,23]
+for(let i=0;i<arrayElement.length;i++){
+    console.log(`Element ${arrayElement[i]} at index ${i}`);
 }
  
