@@ -1,34 +1,36 @@
- // Map() function alternative [Squaring array elements]
-
-const array= [1,2,3,4,5];
-const squareArray=[];
+function Map(array){
+const resultArray=[];
 for(let val=0;val<array.length;val++){
-    squareArray.push(array[val]**2);
+    resultArray.push(array[val]**2);
 }
-console.log(squareArray)
-
-// Filter() function alternative [Filtering odd numbers out]
-
-const mixedArray=[86,54,7,5,32,54,76,87,23]
-let newArray=[];
-for(let val=0;val<mixedArray.length;val++){
-    if(mixedArray[val]%2==0) newArray.push(mixedArray[val]);
+console.log(resultArray)
 }
-console.log(newArray);
 
-// reduce() function alternative [Reducing array to a single string(value)]
-
-const stringArray=['r','a','i','n','b','o','w'];
-let reducedArray = '';
-for(let val=0;val<stringArray.length;val++){
-    reducedArray+=stringArray[val];
+function Filter(array){
+let resultArray=[];
+for(let val=0;val<array.length;val++){
+    if(array[val]%2==0) 
+    resultArray.push(array[val]);
 }
-console.log(reducedArray);
-
-//forEach() alternative [Printing elements using for loop]
-
-const arrayElement=[86,54,7,5,32,54,76,87,23]
-for(let i=0;i<arrayElement.length;i++){
-    console.log(`Element ${arrayElement[i]} at index ${i}`);
+console.log(resultArray);
 }
- 
+
+function Reduce(array){
+let resultValue = 0;
+for(let val=0;val<array.length;val++){
+    resultValue+=array[val];
+}
+console.log(resultValue);
+}
+
+function ForEach(array){
+for(let i=0;i<array.length;i++){
+    console.log(`Element ${array[i]} at index ${i}`);
+}
+}
+
+const array= [1,5,8,5,2,9,7,14];
+Map(array);
+Filter(array);
+Reduce(array);
+ForEach(array)
